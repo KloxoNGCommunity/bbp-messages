@@ -150,7 +150,7 @@ class Init
         global $bbpm_bases;
 
         $pattern = sprintf(
-            '/%s\/([^(\z|\s|\/)]*)\/%s\/send[\/]?$/i',
+            '/%s\/([^($|\s|\/)]*)\/%s\/send[\/]?$/i',
             str_replace('/', '\/', bbp_get_user_slug()),
             $bbpm_bases['messages_base']
         );
@@ -313,7 +313,7 @@ class Init
         global $bbpm_bases;
 
         $pattern = sprintf(
-            '/%s\/([^(\z|\s|\/)]*)\/%s\/(^[A-Za-z]|[A-Za-z0-9]+)\/actions[\/]?$/si',
+            '/%s\/([^($|\s|\/)]*)\/%s\/(^[A-Za-z]|[A-Za-z0-9]+)\/actions[\/]?$/si',
             str_replace('/', '\/', bbp_get_user_slug()),
             $bbpm_bases['messages_base']
         );
